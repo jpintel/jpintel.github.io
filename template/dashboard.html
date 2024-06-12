@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <script type="module" src="../assets/js/dashboard.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav id="navHeader">
+            <div id="user">
+                <div>
+                    <svg role="img" width="30" viewBox="0 0 130 130" aria-label="icon">
+                        <g fill="none" stroke="white" stroke-width="8">
+                            <circle cx="64" cy="42" r="34"></circle>
+                            <path d="M81 72c18 6 32 27 32 50H17c0-23 13-43 31-50"></path>
+                        </g>
+                    </svg>
+                </div>
+                <p id="loginName"></p>
+            </div>
+            <div id="divDisconnect">
+                <p>Disconnexion</p>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="mainSide">
+            <section id="userInformation" class="sectionDashboard">
+                <div id="userInformationSide" class="divSectionDashboard">
+                    <h2 class="titreDivDashboard">Information</h2>
+                    <div>
+                        <p id="firstName" class="information">First Name : </p>
+                        <p id="lastName" class="information">Last Name : </p>
+                        <p id="phoneNumber" class="information">Phone : </p>
+                        <p id="email" class="information"> Email : </p>
+                        <p id="gender" class="information">Gender : </p>
+                        <p id="situation" class="information">Situation : </p>
+                        <p id="addressCity" class="information">Address : </p>
+                        <p id="birth" class="information">Birth : </p>
+                    </div>
+                </div>
+            </section>
+            <section id="dashboardMetrics">
+                <section class="sectionDashboard">
+                <div class="divSectionDashboard">
+                    <h2 class="titreDivDashboard">Audits Ratio</h2>
+                    <div>
+                        <div class="divGraphAuditRatio">
+                            <div class="divGraphAuditOneRatio">
+                                <svg xmlns="http://www.w3.org/2000/svg">
+                                    <title>Graph audit Ratio done</title>
+                                    <!-- Barre pour la valeur 3 -->
+                                    <rect id="rectRatioDone" x="10" y="10" height="20" fill="blue" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p id="xpRatioDone" class="pAuditRatio"></p>
+                                <p class="pAuditRatio">Done</p>
+                            </div>
+                        </div>
+                        <div class="divGraphAuditRatio">
+                            <div class="divGraphAuditOneRatio">
+                                <svg xmlns="http://www.w3.org/2000/svg">
+                                    <title>Graph audit Ratio received</title>
+                                    <!-- Barre pour la valeur 4 -->
+                                    <rect id="rectRatioReceived" x="10" y="10" height="20" fill="red" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p id="xpRatioReceived" class="pAuditRatio"></p>
+                                <p class="pAuditRatio">Received</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="divRatio">
+                        <p id="pRatio"></p>
+                    </div>
+                </div>
+            </section>
+            <section id="sectionXPAmount" class="sectionDashboard">
+                <div class="divSectionDashboard">
+                    <h2 class="titreDivDashboard">XP amount</h2>
+                    <div id="divGraphXPAmountDashboard">
+                        <svg viewBox="0 0 600 400" preserveAspectRatio="xMidYMid meet">
+                            <!-- Barre 1 -->
+                            <rect id="rectPiscineGo" x="100" width="100" fill="blue" />
+                            <!-- Barre 2 -->
+                            <rect id="rectDiv01" x="250" width="100" fill="green" />
+                            <!-- Barre 3 -->
+                            <rect id="rectPiscineJs" x="400" width="100" fill="red" />
+                            <!-- Légende top des X -->
+                            <text id="textNBPiscineGo" x="110" y="20" font-family="Arial" fill="blue" font-size="20">0,00 mB</text>
+                            <text id="textNBDiv01" x="260" y="20" font-family="Arial" fill="green" font-size="20">0,00 mB</text>
+                            <text id="textNBPiscineJs" x="410" y="20" font-family="Arial" fill="red" font-size="20">0,00 mB</text>
+                            <!-- Légende Bottom des X -->
+                            <text x="100" y="365" font-family="Arial" fill="blue" font-size="20">Piscine Go</text>
+                            <text x="275" y="365" font-family="Arial" fill="green" font-size="20">Div 01</text>
+                            <text x="400" y="365" font-family="Arial" fill="red" font-size="20">Piscine JS</text>
+                        </svg>
+                    </div>
+                </div>
+            </section>
+            </section>
+            <section class="sectionDashboard">
+                <div class="divSectionDashboard">
+                    <h2 class="titreDivDashboard">Skills</h2>
+                    <div>
+                        <svg width="100%" height="500" viewBox="-1 -1 2 2" style="transform: rotate(-0.25turn)">
+                            <circle r="1" fill="white"/>
+                            <g id="slices"></g>
+                            <g id="labels"></g>
+                        </svg>
+                        <div id="legendGraphSkills">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

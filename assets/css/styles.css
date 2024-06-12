@@ -1,0 +1,198 @@
+/* styles.css */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right, #380b51, #371964, #691b8d);
+    color: #333;
+}
+
+header {
+    height: 60px;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    color: white;
+}
+
+#navHeader {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#user {
+    display: flex;
+    align-items: center;
+}
+
+#user svg {
+    margin-right: 10px;
+}
+
+#loginName {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#divDisconnect {
+    cursor: pointer;
+}
+
+.power-icon {
+    width: 30px;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    overflow-y: auto;
+}
+
+#mainSide {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sectionDashboard {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.divSectionDashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titreDivDashboard {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.information {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* Container for Audits Ratio and XP Amount */
+#dashboardMetrics {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+#legendGraphSkills {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between; /* Distribute space between left and right sections */
+    width: 100%;
+}
+
+.legendSection {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.legendItem {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    color: black;
+}
+
+.legendColor {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Specific styles for XP amount section */
+#sectionXPAmount .divSectionDashboard {
+    align-items: center; /* Center the content in XP amount section */
+    text-align: center; /* Center text inside the section */
+}
+
+#sectionXPAmount svg {
+    margin: 0 auto; /* Center the SVG within its container */
+    display: block;
+    width: 100%; /* Make sure it takes full width */
+    height: auto; /* Keep aspect ratio */
+}
+
+.divGraphAuditRatio {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.divGraphAuditOneRatio {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.divGraphAuditOneRatio svg {
+    width: 30rem; /* Adjust width to your needs */
+    height: 30px; /* Adjust height to your needs */
+}
+
+.pAuditRatio {
+    margin: 0;
+    font-size: 16px;
+    text-align: center;
+}
+
+#divRatio {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#pRatio {
+    padding: 10px 20px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #fff;
+}
